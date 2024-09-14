@@ -1,14 +1,21 @@
 package com.ucb.FramkyService;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class GreetingServiceTest {
+@SpringBootTest
+public class GreetingServiceTest {
+
+    @Autowired
+    private GreetingService greetingService;
 
     @Test
-    void getGreeting() {
-        GreetingService greetingService = new GreetingService();
-        assertEquals("Preguntate si lo que estas haciendo hoy te acerca al lugar en el que quieres estar mañana", greetingService.getGreeting());
+    public void testGetGreeting() {
+        String expectedMessage = "Pregúntate si lo que estás haciendo hoy te acerca al lugar en el que quieres estar mañana";
+        String actualMessage = greetingService.getGreeting();
+        assertEquals(expectedMessage, actualMessage);
     }
 }
