@@ -18,4 +18,12 @@ public class GreetingServiceTest {
         String actualMessage = greetingService.getGreeting();
         assertEquals(expectedMessage, actualMessage);
     }
+
+    @Test
+    public void testGetPersonalizedGreeting() {
+        String name = "Fabio";
+        String expectedMessage = "Fabio, Pregúntate si lo que estás haciendo hoy te acerca al lugar en el que quieres estar mañana";
+        String actualMessage = greetingService.getPersonalizedGreeting(name);
+        assertEquals(expectedMessage, actualMessage);
+    }
 }

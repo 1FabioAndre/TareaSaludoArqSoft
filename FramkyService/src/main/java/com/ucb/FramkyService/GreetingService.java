@@ -7,9 +7,13 @@ import org.springframework.stereotype.Service;
 public class GreetingService {
 
     @Value("${greeting.message}")
-    private String greet;
+    private String greetMessage;
 
     public String getGreeting() {
-        return greet;
+        return greetMessage;
+    }
+
+    public String getPersonalizedGreeting(String name) {
+        return String.format("%s, %s", name, greetMessage);
     }
 }
