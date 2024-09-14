@@ -9,6 +9,6 @@ class GreetingServiceTest {
     @Test
     void getGreeting() {
         GreetingService greetingService = new GreetingService();
-        assertEquals("Preguntate si lo que estas haciendo hoy te hacerca al lugar en el que quieres estar mañana", greetingService.getGreeting());
+        assertEquals("Preguntate si lo que estas haciendo hoy te acerca al lugar en el que quieres estar mañana", greetingService.getGreeting());
     }
 }
