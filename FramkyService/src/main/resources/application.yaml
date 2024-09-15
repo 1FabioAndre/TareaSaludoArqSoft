@@ -3,7 +3,9 @@ spring:
     name:FramkyService
 
 greeting:
-  message: "Pregúntate si lo que estás haciendo hoy te acerca al lugar en el que quieres estar mañana"
+  messages:
+    en: "Ask yourself if what you are doing today is getting you closer to the place you want to be tomorrow"
+    es: "Pregúntate si lo que estás haciendo hoy te acerca al lugar en el que quieres estar mañana"
 
 server:
   port: 9090

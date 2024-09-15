@@ -14,12 +14,12 @@ public class GreetingController {
     }
 
     @GetMapping("/greet")
-    public String greet() {
-        return greetingService.getGreeting();
+    public String greet(@RequestParam(defaultValue = "en") String language) {
+        return greetingService.getGreeting(language);
     }
 
     @GetMapping("/greet-personalized")
-    public String greetPersonalized(@RequestParam String name) {
-        return greetingService.getPersonalizedGreeting(name);
+    public String greetPersonalized(@RequestParam String name, @RequestParam(defaultValue = "en") String language) {
+        return greetingService.getPersonalizedGreeting(name, language);
     }
 }
